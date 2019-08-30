@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<Configuration monitorInterval="60">
+	<Properties>
+		<Property name="log-path">C:/log</Property>
+		<Property name="archive">${log-path}/archive</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="Console-Appender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss} [TId=%X{threadId}]
+					[TN=%t] [%X{userId}] %c{1}:%M: %msg%n
+				</pattern>
+			</PatternLayout>
+		</Console>
+		<RollingFile name="RollingFile-Appender" fileName="${log-path}/ats.log"
+			filePattern="${log-path}/multiple.log.%d{yyyy-MM-dd}-%i.zip">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss} [TId=%X{threadId}]
+					[TN=%t] [%X{userId}] %c{1}:%M: %msg%n
+				</pattern>
+			</PatternLayout>
+			<!-- <Policies> <TimeBasedTriggeringPolicy interval="1" modulate="true"/> 
+				</Policies> -->
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" /> <!-- Or every 100 MB -->
+			</Policies>
+			<DefaultRolloverStrategy max="500" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.gcs.rms" level="debug">
+			<AppenderRef ref="RollingFile-Appender" />
+			<AppenderRef ref="Console-Appender" />
+		</Logger>
+		<Logger name="org.springframework">
+			<Level value="info" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="Console-Appender" />
+			<AppenderRef ref="RollingFile-Appender" />
+		</Root>
+	</Loggers>
+</Configuration>

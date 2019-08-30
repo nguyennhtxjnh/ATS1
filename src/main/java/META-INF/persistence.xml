@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ats">
+		<class>com.ats.entity.Users</class>
+		<class>com.ats.entity.Apply</class>
+		<class>com.ats.entity.Certification</class>
+		<class>com.ats.entity.City</class>
+		<class>com.ats.entity.Company</class>
+		<class>com.ats.entity.Companyindustry</class>
+		<class>com.ats.entity.Cv</class>
+		<class>com.ats.entity.Education</class>
+		<class>com.ats.entity.Logjob</class>
+		<class>com.ats.entity.Logcv</class>
+		<class>com.ats.entity.Logusers</class>
+		<class>com.ats.entity.Industry</class>
+		<class>com.ats.entity.Job</class>
+		<class>com.ats.entity.Joblevel</class>
+		<class>com.ats.entity.Jobseekerlikejob</class>
+		<class>com.ats.entity.Logusers</class>
+		<class>com.ats.entity.Projectorproductworked</class>
+		<class>com.ats.entity.Receipts</class>
+		<class>com.ats.entity.Role</class>
+		<class>com.ats.entity.Servicepackage</class>
+		<class>com.ats.entity.Skill</class>
+		<class>com.ats.entity.Skillincv</class>
+		<class>com.ats.entity.Skillmaster</class>
+		<class>com.ats.entity.Skillneedforjob</class>
+		<class>com.ats.entity.Skilltype</class>
+		<class>com.ats.entity.Socialactivities</class>
+		<class>com.ats.entity.Workexperience</class>		
+	</persistence-unit>
+</persistence>

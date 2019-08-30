@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/demoats</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.id.new_generator_mappings">false</property>
+    <mapping class="com.ats.entity.Apply"/>
+    <mapping class="com.ats.entity.Certification"/>
+    <mapping class="com.ats.entity.City"/>
+    <mapping class="com.ats.entity.Company"/>
+    <mapping class="com.ats.entity.Companyindustry"/>
+    <mapping class="com.ats.entity.Countcv"/>
+    <mapping class="com.ats.entity.Countjob"/>
+    <mapping class="com.ats.entity.Cv"/>
+    <mapping class="com.ats.entity.Education"/>
+    <mapping class="com.ats.entity.Employercompany"/>
+    <mapping class="com.ats.entity.Feedback"/>
+    <mapping class="com.ats.entity.Feedbacktype"/>
+    <mapping class="com.ats.entity.Industry"/>
+    <mapping class="com.ats.entity.Job"/>
+    <mapping class="com.ats.entity.Joblevel"/>
+    <mapping class="com.ats.entity.Jobseekerlikejob"/>
+    <mapping class="com.ats.entity.Logcv"/>
+    <mapping class="com.ats.entity.Logjob"/>
+    <mapping class="com.ats.entity.Logusers"/>
+    <mapping class="com.ats.entity.Projectorproductworked"/>
+    <mapping class="com.ats.entity.Receipts"/>
+    <mapping class="com.ats.entity.Role"/>
+    <mapping class="com.ats.entity.Servicepackage"/>
+    <mapping class="com.ats.entity.Skill"/>
+    <mapping class="com.ats.entity.Skillincv"/>
+    <mapping class="com.ats.entity.Skillmaster"/>
+    <mapping class="com.ats.entity.Skillneedforjob"/>
+    <mapping class="com.ats.entity.Skilltype"/>
+    <mapping class="com.ats.entity.Socialactivities"/>
+    <mapping class="com.ats.entity.Users"/>
+    <mapping class="com.ats.entity.Userslikecv"/>
+    <mapping class="com.ats.entity.Workexperience"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+
+  </session-factory>
+
+</hibernate-configuration>
